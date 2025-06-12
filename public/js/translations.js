@@ -37,7 +37,7 @@ const translations = {
         "process.step3.description": "Receive a complete report with confidence level and make better decisions.",
         
         // Use Cases Section
-        "cases.title": "Use Cases",
+        "cases.title": "Use cases",
         "cases.kyc": "KYC/KYB",
         "cases.financial": "Financial Services",
         "cases.transport": "Transportation and Logistics", 
@@ -53,11 +53,12 @@ const translations = {
         "fraud.description": "Verify the identity of any person and company to be able to streamline your onboarding processes or high investigation, diminishing fraud in your company and saving time and money",
         "fraud.demo": "Request Demo",
         
-        // Footer CTA
-        "footer.cta.title": "Ready to Regain Trust?",
-        "footer.cta.description": "Join companies that trust TrustMax to validate identities safely and efficiently.",
-        "footer.cta.demo": "Request Free Demo",
-        "footer.cta.expert": "Talk to an Expert",
+        // Recover Trust CTA
+        "recover.title": "Ready to regain trust?",
+        "recover.description.1": "Join companies that trust",
+        "recover.description.2": "to validate identities safely and efficiently.",
+        "recover.demo": "Request Free Demo",
+        "recover.expert": "Talk to an Expert",
         
         // Language Switcher
         "language.switch": "ES 🇲🇽"
@@ -100,7 +101,7 @@ const translations = {
         "process.step3.description": "Recibe un reporte completo con el nivel de confianza y toma mejores decisiones.",
         
         // Use Cases Section  
-        "cases.title": "Casos de Uso",
+        "cases.title": "Casos de uso",
         "cases.kyc": "KYC/KYB",
         "cases.financial": "Servicios Financieros",
         "cases.transport": "Transporte y Logística",
@@ -116,11 +117,12 @@ const translations = {
         "fraud.description": "Verifica la identidad de cualquier persona y empresa para poder agilizar tus procesos de onboarding o alta de investigación, disminuyendo el fraude en tu empresa y ahorrando tiempo y dinero",
         "fraud.demo": "Solicitar Demo",
         
-        // Footer CTA
-        "footer.cta.title": "¿Listo para Recuperar la Confianza?",
-        "footer.cta.description": "Únete a las empresas que confían en TrustMax para validar identidades de manera segura y eficiente.",
-        "footer.cta.demo": "Solicitar Demo Gratuito",
-        "footer.cta.expert": "Hablar con un Experto",
+        // Recover Trust CTA
+        "recover.title": "¿Listo para recuperar la confianza?",
+        "recover.description.1": "Únete a las empresas que confían en",
+        "recover.description.2": "para validar identidades de manera segura y eficiente.",
+        "recover.demo": "Solicitar Demo Gratuito",
+        "recover.expert": "Hablar con un Experto",
         
         // Language Switcher
         "language.switch": "EN 🇺🇸"

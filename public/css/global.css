@@ -105,8 +105,8 @@
 	--clr-drawer-border-primary: rgba(0, 119, 255, 0.1);
 	--clr-drawer-border-secondary: rgba(255, 143, 68, 0.1);
 	--clr-drawer-border-tertiary: rgba(0, 128, 0, 0.1);
-  --clr-drawer-underline-primary: rgba(0, 119, 255, 0.5);
-  --clr-drawer-underline-secondary: rgba(151, 199, 255, 0.5);
+  --clr-drawer-underline-primary: rgba(61, 152, 255, 0.2);
+  --clr-drawer-underline-secondary: rgba(0, 128, 0, 0.2);
 
   /* Card */
   --clr-card-background: var(--clr-cloud);
@@ -124,7 +124,7 @@
   --clr-tertiary-alt: var(--clr-emerald-alt);
   --clr-quaternary: var(--clr-bronze);
   --clr-quaternary-alt: var(--clr-taupe);
-  --clr-link: var(--clr-azure);
+  --clr-link: #588dff;
   --clr-error: #f1163e;
 
   /* Text */
@@ -138,24 +138,30 @@
 	--br-curved-xs: 0.5rem;
 	--br-curved-sm: 1rem;
 	--br-curved-card: 0.625rem;
+	--bw-regular: 0.25rem;
+	--bw-sm: 0.188rem;
 	--br-curved-full: 100rem;
 	--header-pady: 2rem;
 	--container-pady: 2.5rem;
 	--container-padx: 4rem;
 	--container-padb: 2.5rem;
 	--container-space-between: 4rem;
+	--container-gap: 1.5rem;
+	--content-gap: 2.5rem;
 	--card-img-height: 12rem;
+	--card-padding: 2rem 1.5rem;
 	--text-hero-welcome: 1.875rem;
 	--text-hero-slogan: 3.125rem;
 	--text-hero-description: 2rem;
 	--text-title: 2.625rem;
 	--text-subtitle: 1.875rem;
 	--text-title-sm: 1.5rem;
+	--text-title-xs: 1.5rem;
 	--text-subtitle-height: 1.125;
 	--text-gap: 1.5rem;
+	--text-gap-lg: 2rem;
 	--text-gap-short: 1.25rem;
 	--text-gap-min: 0.75rem;
-	--br-card: 1.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -177,6 +183,8 @@
     --clr-drawer-border-secondary: rgba(255, 209, 179, 0.1);
     --clr-drawer-border-tertiary: rgba(180, 255, 213, 0.1);
     --clr-drawer-transparent: rgba(27, 27, 27, 0.8);
+		--clr-drawer-underline-primary: rgba(187, 219, 255, 0.2);
+  	--clr-drawer-underline-secondary: rgba(180, 255, 213, 0.2);
 
     /* Card */
     --clr-card-background: var(--clr-graphite-alt);
@@ -186,8 +194,7 @@
     --clr-borders-quaternary: rgb(234, 208, 125, 0.7);
 
     /* CTA */
-    --clr-link: var(--clr-azure);
-    --clr-error: #f1163e;
+    --clr-link: #3373ff;
 
     /* Text */
     --clr-text: var(--clr-cloud);
@@ -219,6 +226,8 @@
 		--container-padx: 2.5rem;
 		--container-padb: 1.5rem;
 		--container-space-between: 2.5rem;
+		--content-gap: 2rem;
+		--card-padding: 1.5rem 1rem;
 		--text-hero-welcome: 1.563rem;
 		--text-hero-slogan: 2.5rem;
 		--text-hero-description: 1.563rem;
@@ -238,6 +247,7 @@
 		--text-hero-slogan:   1.875rem;
 		--text-hero-description: 1.313rem;
 		--text-title: 2.125rem;
+		--text-title-xs: 1.125rem;
 	}
 }
 
@@ -246,11 +256,13 @@
 		--header-pady: 1.5rem;
 		--container-pady: 1.5rem;
 		--container-padx: 2rem;
+		--card-padding: 1rem;
 	}
 }
 
 @media (max-width: 30rem) {
 	:root {
+		--content-gap: 1.5rem;
 		--card-img-height: 10rem;
 		--text-hero-welcome: 1.125rem;
 		--text-hero-slogan: 1.625rem;
@@ -322,7 +334,7 @@ body:has(dialog[open]) {
 		width: 100%;
 		min-width: 20rem;
 		max-width: 83.5rem;
-		gap: 1.5rem;
+		gap: var(--container-gap);
 
 		.section_header {
 			display: flex;
@@ -335,6 +347,10 @@ body:has(dialog[open]) {
 			gap: var(--text-gap-short);
       margin-top: 1rem;
       margin-bottom: 1rem;
+
+			&.no_mt {
+				margin-top: 0;
+			}
 
 			h2 {
 				font-size: var(--text-title);
@@ -467,17 +483,17 @@ body:has(dialog[open]) {
 	font-size: 1.375rem;
 	text-align: center;
   background-color: var(--clr-primary);
-  border: 0.25rem solid var(--clr-sky);
+  border: var(--bw-regular) solid var(--clr-sky);
 	color: var(--clr-cta-text);
 	border-radius: var(--br-curved-xs);
 	padding: 0.5rem 3rem;
 	text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.15s ease;
 
 	&:hover {	
     background-color: var(--clr-sky);
 		cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.15s ease;
 
 		&::after {
 			opacity: 1;
@@ -486,7 +502,7 @@ body:has(dialog[open]) {
 
 	&.blue {
 		background-color: var(--clr-primary);
-    border: 0.25rem solid var(--clr-sky);
+    border: var(--bw-regular) solid var(--clr-sky);
     
     &:hover {
       background-color: var(--clr-sky);
@@ -495,7 +511,7 @@ body:has(dialog[open]) {
 
 	&.orange {
 		background-color: var(--clr-orange);
-    border: 0.25rem solid var(--clr-secondary-alt);
+    border: var(--bw-regular) solid var(--clr-secondary-alt);
 
     &:hover {
       background-color: var(--clr-secondary-alt);
@@ -504,10 +520,21 @@ body:has(dialog[open]) {
 
 	&.green {
 		background-color: var(--clr-emerald);
-    border: 0.25rem solid var(--clr-emerald-alt);
+    border: var(--bw-regular) solid var(--clr-emerald-alt);
 
     &:hover {
       background-color: var(--clr-emerald-alt);
+    }
+	}
+
+	&.outline {
+		background-color: transparent;
+    border: var(--bw-regular) solid var(--clr-text);
+		color: var(--clr-text);
+
+    &:hover {
+      background-color: var(--clr-text);
+			color: var(--clr-text-neg);
     }
 	}
 
