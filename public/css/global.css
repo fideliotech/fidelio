@@ -639,20 +639,9 @@ body:has(dialog[open]) {
 
 @keyframes scroll {
     from {
-        transform: translateX(2%);
+        transform: translateX(0);
     }
     to {
-        transform: translateX(calc((-101.8% / 10) * 5));
+        transform: translateX(-58.5%);
     }
-}
-
-@media (max-width: 48rem) {
-	@keyframes scroll {
-		from {
-			transform: translateX(2%);
-		}
-		to {
-			transform: translateX(calc((-99.8% / 10) * 5));
-		}
-	}
 }
