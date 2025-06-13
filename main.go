@@ -36,6 +36,8 @@ func main() {
 	}
 
 	router.mux.HandleFunc("/", handleIndex)
+	router.mux.HandleFunc("/services", handleServices)
+	router.mux.HandleFunc("/cases", handleCases)
 	router.mux.HandleFunc("/contact-request", handleContactRequest)
 	router.mux.Handle("/public/", http.StripPrefix("/public/", serveStaticFiles()))
 
@@ -72,6 +74,32 @@ func handleIndex(w http.ResponseWriter, r *http.Request) {
 	}
 	defer indexFile.Close()
 	http.ServeContent(w, r, "index.html", time.Now(), indexFile.(io.ReadSeeker))
+}
+
+func handleServices(w http.ResponseWriter, r *http.Request) {
+	logger.Info("Serving services page to %s", r.RemoteAddr)
+	// Use the embedded filesystem to serve index.html
+	casesFile, err := publicFS.Open("public/html/services.html")
+	if err != nil {
+		logger.Error("Error opening services.html: %v", err)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	defer casesFile.Close()
+	http.ServeContent(w, r, "services.html", time.Now(), casesFile.(io.ReadSeeker))
+}
+
+func handleCases(w http.ResponseWriter, r *http.Request) {
+	logger.Info("Serving cases page to %s", r.RemoteAddr)
+	// Use the embedded filesystem to serve index.html
+	casesFile, err := publicFS.Open("public/html/cases.html")
+	if err != nil {
+		logger.Error("Error opening cases.html: %v", err)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	defer casesFile.Close()
+	http.ServeContent(w, r, "cases.html", time.Now(), casesFile.(io.ReadSeeker))
 }
 
 func handleContactRequest(w http.ResponseWriter, r *http.Request) {

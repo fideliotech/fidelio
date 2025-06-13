@@ -148,15 +148,18 @@
 	--container-space-between: 4rem;
 	--container-gap: 1.5rem;
 	--content-gap: 2.5rem;
+	--banner-img-min-width: 25rem;
+	--banner-img-max-width: 30rem;
 	--card-img-height: 12rem;
 	--card-padding: 2rem 1.5rem;
 	--text-hero-welcome: 1.875rem;
 	--text-hero-slogan: 3.125rem;
 	--text-hero-description: 2rem;
 	--text-title: 2.625rem;
-	--text-subtitle: 1.875rem;
+	--text-title-md: 2.375rem;
 	--text-title-sm: 1.5rem;
 	--text-title-xs: 1.5rem;
+	--text-subtitle: 1.875rem;
 	--text-subtitle-height: 1.125;
 	--text-gap: 1.5rem;
 	--text-gap-lg: 2rem;
@@ -212,10 +215,13 @@
 		--container-padx: 3.25rem;
 		--container-padb: 2rem;
 		--container-space-between: 3.5rem;
+		--banner-img-min-width: 22rem;
+		--banner-img-max-width: 25rem;
 		--text-hero-welcome: 1.625rem;
 		--text-hero-slogan: 2.75rem;
 		--text-hero-description: 1.625rem;
 		--text-title: 2.5rem;
+		--text-title-md: 2.125rem;
 		--text-subtitle: 1.5rem;
 		--text-title-sm: 1.375rem;
 	}
@@ -227,11 +233,14 @@
 		--container-padb: 1.5rem;
 		--container-space-between: 2.5rem;
 		--content-gap: 2rem;
+		--banner-img-min-width: 20rem;
+		--banner-img-max-width: 25rem;
 		--card-padding: 1.5rem 1rem;
 		--text-hero-welcome: 1.563rem;
 		--text-hero-slogan: 2.5rem;
 		--text-hero-description: 1.563rem;
 		--text-title: 2.375rem;
+		--text-title-md: 2rem;
 		--text-subtitle: 1.25rem;
 		--text-subtitle-height: 1.375;
 		--text-gap: 1.25rem;
@@ -243,10 +252,13 @@
 @media (max-width: 48rem) {
 	:root {
 		--card-img-height: 11rem;
+		--banner-img-min-width: 18rem;
+		--banner-img-max-width: 22rem;
 		--text-hero-welcome: 1.375rem;
 		--text-hero-slogan:   1.875rem;
 		--text-hero-description: 1.313rem;
 		--text-title: 2.125rem;
+		--text-title-md: 1.875rem;
 		--text-title-xs: 1.125rem;
 	}
 }
@@ -264,10 +276,13 @@
 	:root {
 		--content-gap: 1.5rem;
 		--card-img-height: 10rem;
+		--banner-img-min-width: 16rem;
+		--banner-img-max-width: 20rem;
 		--text-hero-welcome: 1.125rem;
 		--text-hero-slogan: 1.625rem;
 		--text-hero-description: 1.125rem;
 		--text-title: 1.875rem;
+		--text-title-md: 1.625rem;
 		--text-subtitle: 1.063rem;
 		--text-gap: 1rem;
 	}

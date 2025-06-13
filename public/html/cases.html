@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casos de Uso - fidelio</title>
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="stylesheet" href="/public/css/global.css">
+  <link rel="stylesheet" href="/public/css/main.css">
+  <link rel="stylesheet" href="/public/css/usecases.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="/public/js/main.js" defer></script>
+  <script src="/public/js/translations.js" defer></script>
+</head>
+<body>
+  <input type="checkbox" id="drawerToggle" hidden>
+  <label class="drawer_link" for="drawerToggle">
+    <svg viewBox="0 0 32 32">
+      <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+      <path class="line" d="M7 16 27 16"></path>
+    </svg>
+  </label>
+  <header class="header_styles_fixed">
+    <nav class="nav_container">
+      <div>
+        <a href="/" class="logo"></a>
+      </div>
+      <ul>
+        <li class="nav_tab"><a href="/" data-i18n="nav.inicio" class="nav_link text_med">Inicio</a></li>
+        <li class="nav_tab"><a href="/services" data-i18n="nav.servicios" class="nav_link text_med">Servicios</a></li>
+        <li class="nav_tab"><a href="/cases" data-i18n="nav.casos" class="nav_link text_med">Casos de uso</a></li>
+        <li class="nav_tab"><a href="/contact" data-i18n="nav.contacto" class="nav_link text_med">Contacto</a></li>
+        <li class="nav_tab">
+          <a 
+            id="language-switcher"
+            role="button"
+            data-lang="en"
+            data-i18n="language.switch"
+            class="nav_link text_med"
+          >
+            EN 🇺🇸
+          </a>
+        </li>
+        <li class="nav_tab custom_cta custom_cta_xs primary primary_sm">
+          <a href="#demo" data-i18n="nav.demo" class="nav_link">Solicitar Demo</a>
+        </li>
+        <li class="nav_tab"></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="header_styles"><span></span></div>
+  <div class="drawer_content">
+    <ul>
+      <li><a href="/" data-i18n="nav.inicio" class="nav_link">Inicio</a></li>
+      <hr />
+      <li><a href="/services" data-i18n="nav.servicios" class="nav_link">Servicios</a></li>
+      <hr />
+      <li><a href="/cases" data-i18n="nav.casos" class="nav_link">Casos de uso</a></li>
+      <hr />
+      <li><a href="/contact" data-i18n="nav.contacto" class="nav_link">Contacto</a></li>
+      <hr />
+      <li>
+        <a 
+          id="drawer-language-switcher"
+          role="button"
+          data-lang="en"
+          data-i18n="language.switch"
+          class="nav_link"
+        >
+          EN 🇺🇸
+        </a>
+      </li>
+      <hr />
+      <li><a href="/#demo" data-i18n="nav.demo" class="text_med">Solicitar Demo</a></li>
+      <hr />
+    </ul>
+  </div>
+  <main class="main_styles">
+    <div class="page_section usecase_container">
+      <div class="usecase_content">
+        <div class="usecase_text">
+          <div class="usecase_title">
+            <h2 data-i18n="usecases.kyc.title" class="text_med">KYC/KYB</h2>
+            <button class="custom_cta green text_med" data-i18n="usecases.cta">Me interesa</button>
+          </div>
+          <p data-i18n="usecases.kyc.desc">Valida la identidad de clientes y proveedores...</p>
+        </div>
+        <div class="usecase_image">
+          <img src="/public/svg/kyc-kyb.svg" alt="KYC/KYB">
+        </div>
+      </div>
+    </div>
+    <div class="page_section usecase_container reverse">
+      <div class="usecase_content reverse">
+        <div class="usecase_text">
+          <div class="usecase_title">
+            <h2 data-i18n="usecases.logistics.title" class="text_med">Logística y Transporte</h2>
+            <button class="custom_cta green text_med" data-i18n="usecases.cta">Me interesa</button>
+          </div>
+          <p data-i18n="usecases.logistics.desc">Verifica la identidad de conductores y proveedores...</p>
+        </div>
+        <div class="usecase_image">
+          <img src="/public/svg/tx-logistics.svg" alt="Logística y Transporte">
+        </div>
+      </div>
+    </div>
+    <div class="page_section usecase_container">
+      <div class="usecase_content">
+        <div class="usecase_text">
+          <div class="usecase_title">
+            <h2 data-i18n="usecases.financial.title" class="text_med">Servicios Financieros</h2>
+            <button class="custom_cta green text_med" data-i18n="usecases.cta">Me interesa</button>
+          </div>
+          <p data-i18n="usecases.financial.desc">Realiza una verificación de identidad (KYC)...</p>
+        </div>
+        <div class="usecase_image">
+          <img src="/public/svg/finance.svg" alt="Servicios Financieros">
+        </div>
+      </div>
+    </div>
+    <div class="page_section usecase_container reverse">
+      <div class="usecase_content reverse">
+        <div class="usecase_text">
+          <div class="usecase_title">
+            <h2 data-i18n="usecases.construction.title" class="text_med">Construcción</h2>
+            <button class="custom_cta green text_med" data-i18n="usecases.cta">Me interesa</button>
+          </div>
+          <p data-i18n="usecases.construction.desc">Verifica la identidad de contratistas, proveedores...</p>
+        </div>
+        <div class="usecase_image">
+          <img src="/public/svg/construction.svg" alt="Construcción">
+        </div>
+      </div>
+    </div>
+    <div class="page_section usecase_container">
+      <div class="usecase_content">
+        <div class="usecase_text">
+          <div class="usecase_title">
+            <h2 data-i18n="usecases.hr.title" class="text_med">Recursos Humanos</h2>
+            <button class="custom_cta green text_med" data-i18n="usecases.cta">Me interesa</button>
+          </div>
+          <p data-i18n="usecases.hr.desc">Valida la identidad y el historial de empleados...</p>
+        </div>
+        <div class="usecase_image">
+          <img src="/public/svg/human-resources.svg" alt="Recursos Humanos">
+        </div>
+      </div>
+    </div>
+    <div class="page_section usecase_container reverse">
+      <div class="usecase_content reverse">
+        <div class="usecase_text">
+          <div class="usecase_title">
+            <h2 data-i18n="usecases.ecommerce.title" class="text_med">E-commerce</h2>
+            <button class="custom_cta green text_med" data-i18n="usecases.cta">Me interesa</button>
+          </div>
+          <p data-i18n="usecases.ecommerce.desc">Verifica la identidad de usuarios y proveedores...</p>
+        </div>
+        <div class="usecase_image">
+          <img src="/public/svg/ecommerce.svg" alt="E-commerce">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer_styles">
+    <div class="footer_content">
+      <div class="footer_section">
+        <div class="footer_logo"></div>
+        <p data-i18n="cta.description" class="footer_description">Verifica la identidad de cualquier persona y empresa para poder agilizar tus procesos de onboarding, disminuyendo el fraude en tu empresa y ahorrando tiempo y dinero.</p>
+      </div>
+      <div class="footer_section">
+        <ul>
+          <li><a href="mailto:info@fidelio.com"><span class="material-icons blue">mail</span>info@fidelio.com</a></li>
+          <li><a href="tel:+11234567890"><span class="material-icons blue">phone</span>+1 (123) 456-7890</a></li>
+          <li><span class="material-icons blue">location_on</span>123 Business Ave, Suite 100 City, State 12345</li>
+          <li class="copyright">© 2025<span></span>All rights reserved.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="whatsapp_container">
+    <a href="https://wa.me/11234567890" target="_blank" rel="noopener noreferrer" class="whatsapp_float" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" class="whatsapp_icon">
+        <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+  <div id="snackBar" tabindex="-1" class="snack_bar">
+    <div class="snack_text"></div>
+  </div>
+</body>
+</html> 
