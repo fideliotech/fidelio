@@ -63,7 +63,7 @@
   --clr-tealblue: #0A2C54;
   --clr-cobalt: #0F427E;
   --clr-azure: #0075ff;
-  --clr-lake: #70adf4;
+  --clr-lake: #6daff9;
   --clr-sky: #97C7FF;
 
   /* Greens */
@@ -105,8 +105,12 @@
 	--clr-drawer-border-primary: rgba(0, 119, 255, 0.1);
 	--clr-drawer-border-secondary: rgba(255, 143, 68, 0.1);
 	--clr-drawer-border-tertiary: rgba(0, 128, 0, 0.1);
+  --clr-drawer-text-primary: rgb(61, 152, 255);
+  --clr-drawer-text-secondary: rgb(88, 155, 255);
   --clr-drawer-underline-primary: rgba(61, 152, 255, 0.2);
   --clr-drawer-underline-secondary: rgba(0, 128, 0, 0.2);
+  --clr-drawer-underline-primary-vibrant: rgba(61, 152, 255, 0.4);
+  --clr-drawer-underline-secondary-vibrant: rgba(0, 128, 0, 0.4);
 
   /* Card */
   --clr-card-background: var(--clr-cloud);

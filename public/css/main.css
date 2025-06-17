@@ -69,6 +69,10 @@
 				text-decoration: none;
 				transition: color 0.2s ease;
 
+				&.active_tab {
+					color: var(--clr-lake);
+				}
+
 				&:hover {
 					color: var(--clr-lake);
           transition: color 0.2s ease;
@@ -242,6 +246,10 @@
 				color: var(--clr-text);
 				text-decoration: none;
 
+				&.active_tab {
+					color: var(--clr-lake);
+				}
+
 				&[role="button"] {
 					cursor: pointer;
 				}
@@ -250,7 +258,10 @@
 
 		li:last-of-type {
 			a {
-        color: #2e8fff;
+        background: -webkit-linear-gradient(0.125turn, var(--clr-drawer-text-primary), var(--clr-drawer-text-primary), var(--clr-drawer-text-secondary));
+				background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 			}
 		}
 
@@ -273,6 +284,12 @@
 			width: 100%;
 			background: -webkit-linear-gradient(0.125turn, var(--clr-drawer-underline-primary), var(--clr-drawer-underline-secondary));
 			border-radius: 1rem;
+		}
+
+		hr:last-of-type {
+			&::before {
+				background: -webkit-linear-gradient(0.125turn, var(--clr-drawer-underline-primary-vibrant), var(--clr-drawer-underline-primary-vibrant), var(--clr-drawer-underline-secondary-vibrant));
+			}
 		}
 	}
 }

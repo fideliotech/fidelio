@@ -1,10 +1,9 @@
 const translations = {
     en: {
         // Navigation
-        "nav.inicio": "Home",
+        "nav.home": "Home",
         "nav.servicios": "Services", 
         "nav.casos": "Use Cases",
-        "nav.contacto": "Contact",
         "nav.demo": "Request Demo",
         
         // Hero Section
@@ -111,10 +110,9 @@ const translations = {
     },
     es: {
         // Navigation  
-        "nav.inicio": "Inicio",
+        "nav.home": "Inicio",
         "nav.servicios": "Servicios",
         "nav.casos": "Casos de uso", 
-        "nav.contacto": "Contacto",
         "nav.demo": "Solicitar Demo",
         
         // Hero Section
