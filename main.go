@@ -21,14 +21,11 @@ var ignoredPaths = []string{
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		logger.Error("Error loading .env file: %v", err)
-		// Don't exit in production, just log the error
-	}
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
+	isDev := os.Getenv("ENVIRONMENT") == "development"
+	if isDev {
+		if err := godotenv.Load(".env"); err != nil {
+			logger.Error("Error loading .env file: %v", err)
+		}
 	}
 
 	router := &exactPathMux{
@@ -58,6 +55,11 @@ func main() {
 
 		h.ServeHTTP(w, r)
 	})
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 
 	logger.Info("Server starting on :%s", port)
 	logger.Error("%v", http.ListenAndServe(":"+port, handler))
