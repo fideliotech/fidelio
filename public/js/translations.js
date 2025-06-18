@@ -5,6 +5,9 @@ const translations = {
         "nav.servicios": "Services", 
         "nav.casos": "Use Cases",
         "nav.demo": "Request Demo",
+
+        // Language Switcher
+        "language.switch": "ES 🇲🇽",
         
         // Hero Section
         "hero.title.1": "Streamline your ",
@@ -105,8 +108,8 @@ const translations = {
         "usecases.ecommerce.desc": "Verify the identity of users and suppliers, ensuring transactions are legitimate. Protect your platform against fraud and improve customer trust in their shopping experience.",
         "usecases.cta": "I'm interested",
 
-        // Language Switcher
-        "language.switch": "ES 🇲🇽"
+        // Footer
+        "footer.description": "Validate the identity of any person or company to streamline your onboarding processes, reducing fraud in your company and saving time and money."
     },
     es: {
         // Navigation  
@@ -114,6 +117,9 @@ const translations = {
         "nav.servicios": "Servicios",
         "nav.casos": "Casos de uso", 
         "nav.demo": "Solicitar Demo",
+
+        // Language Switcher
+        "language.switch": "EN 🇺🇸",
         
         // Hero Section
         "hero.title.1": "Agiliza tus procesos de ",
@@ -214,7 +220,7 @@ const translations = {
         "usecases.ecommerce.desc": "Verifica la identidad de usuarios y proveedores, asegurando que las transacciones sean legítimas. Protege tu plataforma contra fraudes y mejora la confianza de los clientes en su experiencia de compra.",
         "usecases.cta": "Me interesa",
 
-        // Language Switcher
-        "language.switch": "EN 🇺🇸"
+        // Footer
+        "footer.description": "Verifica la identidad de cualquier persona y empresa para poder agilizar tus procesos de onboarding, disminuyendo el fraude en tu empresa y ahorrando tiempo y dinero."
     }
 }; 
