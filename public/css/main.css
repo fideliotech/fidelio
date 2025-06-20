@@ -63,7 +63,6 @@
 			.nav_link {
 				position: relative;
 				min-width: max-content;
-				font-weight: 400;
 				font-size: 1rem;
 				color: var(--clr-text);
 				text-decoration: none;
@@ -1572,11 +1571,6 @@
 				color: var(--clr-text-alt);
 				line-height: 1.6;
 				margin: 0;
-
-				strong {
-					color: var(--clr-text);
-					font-weight: var(--font-semi);
-				}
 			}
 
 			ul {

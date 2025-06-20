@@ -64,8 +64,7 @@ const translations = {
         
         // Service Details
         "service.suppliers.title": "Supplier Validation",
-        "service.suppliers.description": "Instantly validate your suppliers' documents, avoiding fraud, streamlining the registration process and calculating risk to make",
-        "service.suppliers.highlight": "informed decisions about whether it's worth working with them.",
+        "service.suppliers.description": "Instantly validate your suppliers' documents, avoiding fraud, streamlining the registration process and calculating risk to make informed decisions about whether it's worth working with them.",
         "service.suppliers.feature1": "Automatic verification of tax documents",
         "service.suppliers.feature2": "Criminal background investigation",
         "service.suppliers.feature3": "Risk analysis report",
@@ -176,8 +175,7 @@ const translations = {
         
         // Service Details
         "service.suppliers.title": "Validación de Proveedores",
-        "service.suppliers.description": "Valida al instante los documentos de tus proveedores, evitando fraudes, agilizando el proceso de alta y calculando el riesgo para tomar",
-        "service.suppliers.highlight": "decisiones informadas sobre si vale la pena trabajar con ellos.",
+        "service.suppliers.description": "Valida al instante los documentos de tus proveedores, evitando fraudes, agilizando el proceso de alta y calculando el riesgo para tomar decisiones informadas sobre si vale la pena trabajar con ellos.",
         "service.suppliers.feature1": "Verificación automática de documentos fiscales",
         "service.suppliers.feature2": "Investigación de antecedentes penales",
         "service.suppliers.feature3": "Reporte sobre análisis de riesgo",
