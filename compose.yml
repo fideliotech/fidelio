@@ -1,7 +1,7 @@
 services:
   fidelio:
-    container_name: fidelio
-    image: ggsheet/fidelio:1.0.0
+    container_name: fidelio-home
+    image: ggsheet/fidelio-home:1.0.0
     build:
       context: .
       dockerfile: Dockerfile
