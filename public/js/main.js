@@ -28,67 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const formData = new FormData(contactForm);
-      const data = {};
-      formData.forEach((value, key) => {
-        data[key] = value;
-      });
-      try {
-        const response = await fetch('/contact-request', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
-        if (response.ok) {
-          showSnackbar('Request sent successfully!');
-          contactForm.reset();
-        } else {
-          showSnackbar('Failed to send request. Please try again.');
-        }
-      } catch (err) {
-        showSnackbar('Error sending request.');
-      } 
-    });
-  }
-
-  let snackbarTimeout = null;
-  function showSnackbar(message) {
-    const snackbar = document.getElementById('snackBar');
-    const snackText = snackbar.querySelector('.snack_text');
-    
-    if (snackbarTimeout) {
-      clearTimeout(snackbarTimeout);
-      
-      if (snackbar.classList.contains('show')) {
-        snackbar.classList.remove('show');
-          
-        setTimeout(() => {
-          showNewSnackbar();
-        }, 50);
-      } else {
-        showNewSnackbar();
-      }
-    } else {
-      showNewSnackbar();
-    }
-    
-    function showNewSnackbar() {
-      snackText.textContent = message;
-      snackbar.classList.add('show');
-      
-      snackbarTimeout = setTimeout(() => {
-        snackbar.classList.remove('show');
-        snackbarTimeout = null;
-      }, 4000);
-    }
-  }
-
   const languageSwitcher = document.getElementById('language-switcher');
   const drawerLanguageSwitcher = document.getElementById('drawer-language-switcher');
   const currentLang = localStorage.getItem('language') || 'es';
@@ -102,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const newLang = lang === 'en' ? 'es' : 'en';
     const switchText = translations[newLang]['language.switch'];
     
-    // Update both language switchers
     [languageSwitcher, drawerLanguageSwitcher].forEach(switcher => {
       if (switcher) {
         switcher.setAttribute('data-lang', newLang);
@@ -115,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     
-    // Update all translatable elements
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
@@ -135,10 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
   updateLanguage(currentLang);
 
-  // Add click handlers for both language switchers
   [languageSwitcher, drawerLanguageSwitcher].forEach(switcher => {
     if (switcher) {
       switcher.addEventListener('click', () => {
@@ -170,47 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       scrollToSection(targetElement);
     }
-  }
-
-  function scrollToSection(element) {
-    const headerOffset = 110;
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (prefersReducedMotion) {
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'auto'
-      });
-    } else {
-      const startPosition = window.scrollY;
-      const distance = offsetPosition - startPosition;
-      const duration = 1200;
-      let startTime = null;
-
-      function easeInOutCubic(t) {
-        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-      }
-
-      function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-        const ease = easeInOutCubic(progress);
-        
-        window.scrollTo(0, startPosition + distance * ease);
-        
-        if (timeElapsed < duration) {
-          requestAnimationFrame(animation);
-        }
-      }
-
-      requestAnimationFrame(animation);
-    }
-
-    document.documentElement.style.overflow = '';
-    body.style.overflow = '';
   }
 
   document.querySelectorAll('.nav_container a, .drawer_content a, .hero_cta a').forEach(link => {
